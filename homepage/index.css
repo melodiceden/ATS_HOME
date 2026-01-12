@@ -226,6 +226,40 @@ section {
     display: block;
 }
 
+/* Guide Section */
+.guide-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.guide-step {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    opacity: 0.5;
+    line-height: 1;
+}
+
+.step-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.step-text p {
+    color: var(--text-dim);
+}
+
 /* Footer */
 footer {
     padding: 4rem 10%;
@@ -253,4 +287,6 @@ footer p {
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
     .nav-links { display: none; }
+    .guide-step { flex-direction: column; gap: 0.5rem; }
+    .step-number { font-size: 2rem; }
 }
