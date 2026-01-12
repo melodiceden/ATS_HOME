@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary-color: #00A2FF; /* Neon Blue */
-    --secondary-color: #8A2BE2; /* Electric Purple */
+    --primary-color: #00A2FF;
+    /* Neon Blue */
+    --secondary-color: #8A2BE2;
+    /* Electric Purple */
     --bg-dark: #0a0a0c;
     --bg-card: rgba(255, 255, 255, 0.05);
     --text-main: #ffffff;
@@ -33,7 +35,7 @@ body {
     height: 100%;
     z-index: -1;
     background: radial-gradient(circle at 20% 30%, rgba(0, 162, 255, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.05) 0%, transparent 40%);
+        radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.05) 0%, transparent 40%);
 }
 
 /* Glassmorphism */
@@ -219,11 +221,33 @@ section {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.preview-container img {
-    width: 100%;
-    display: block;
+.working-message {
+    text-align: center;
+    padding: 4rem;
+}
+
+.working-message .icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.working-message h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.working-message p {
+    color: var(--text-dim);
+    font-size: 1.1rem;
 }
 
 /* Guide Section */
@@ -285,8 +309,24 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .nav-links { display: none; }
-    .guide-step { flex-direction: column; gap: 0.5rem; }
-    .step-number { font-size: 2rem; }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .guide-step {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .step-number {
+        font-size: 2rem;
+    }
+
+    .preview-container {
+        min-height: 300px;
+    }
 }
