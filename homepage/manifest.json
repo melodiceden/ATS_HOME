@@ -1,0 +1,23 @@
+{
+  "name": "ATS - Automated Trading System",
+  "short_name": "ATS",
+  "description": "AI 기반 주식 자동매매 시스템 ATS. 데이터로 이기고 지능으로 매매하라.",
+  "start_url": "/homepage/index.html",
+  "display": "standalone",
+  "background_color": "#0a0a0c",
+  "theme_color": "#00A2FF",
+  "icons": [
+    {
+      "src": "mockup.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "mockup.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
