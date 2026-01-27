@@ -130,37 +130,93 @@
 
     <section id="usage">
         <h2 class="section-title reveal">ATS 사용방법</h2>
-        <div class="usage-content glass reveal">
-            <div class="usage-grid">
-                <div class="usage-card">
-                    <div class="usage-icon">📊</div>
-                    <h3>실시간 트레이딩</h3>
-                    <p>조건 검색을 통해 종목을 포착하고, ML 전략 버튼으로 예측 데이터를 불러와 자동매매를 시작할 수 있습니다. 스케줄러를 통해 특정 시간 예약 매매도 가능합니다.</p>
+        <div class="usage-detail-content reveal">
+
+            <!-- 메인 화면 구성 -->
+            <div class="usage-item glass reveal">
+                <div class="usage-info">
+                    <span class="usage-tag">Overview</span>
+                    <h3>01. 메인 화면 구성</h3>
+                    <p>ATS GUI는 상단 상태바, 중앙 탭 영역, 하단 로그 창으로 구성되어 있습니다. 실시간 시장 지수와 프로그램의 동작 상태를 한눈에 파악할 수 있습니다.</p>
+                    <ul class="usage-list">
+                        <li><strong>시장 상태:</strong> 장중, 장 마감, 휴장일 정보 표시</li>
+                        <li><strong>지수 정보:</strong> KOSPI/KOSDAQ 실시간 등락률</li>
+                        <li><strong>로그 창:</strong> 모든 API 요청 및 매매 내역 실시간 출력</li>
+                    </ul>
                 </div>
-                <div class="usage-card">
-                    <div class="usage-icon">📈</div>
-                    <h3>포트폴리오 관리</h3>
-                    <p>보유 종목의 수익률과 상태를 실시간으로 확인하세요. 종목별 우클릭 메뉴를 통해 개별 익절/손절가 및 목표 수익률을 커스텀 설정할 수 있습니다.</p>
-                </div>
-                <div class="usage-card">
-                    <div class="usage-icon">🔍</div>
-                    <h3>데이터 분석 및 조회</h3>
-                    <p>과거 매매 기록, 일별 수익률, 계좌 요약 정보를 상세히 조회할 수 있습니다. 집계 기능을 통해 승률과 PF 등 통계 지표를 분석해 보세요.</p>
-                </div>
-                <div class="usage-card">
-                    <div class="usage-icon">⚙️</div>
-                    <h3>시스템 설정</h3>
-                    <p>시장 상황 필터, Discord 알림, 트레일링 스탑 등 모든 매매 로직을 관리합니다. 설정 변경 후에는 반드시 [설정 적용] 버튼을 눌러주세요.</p>
+                <div class="usage-media">
+                    <img src="images/main_full.png" alt="ATS 메인 화면" class="usage-img">
                 </div>
             </div>
-            <div class="usage-tips reveal">
-                <h4>💡 사용 팁 및 주의사항</h4>
-                <ul>
-                    <li>매일 아침 <strong>최신 파일 다운로드</strong> 버튼을 눌러 최신 ML 예측 데이터를 업데이트하세요.</li>
-                    <li>예상치 못한 상황 발생 시 즉시 <strong>🚨 비상 정지</strong> 버튼을 활용하여 시스템을 제어하세요.</li>
-                    <li>자동매매 시작 전 설정 탭에서 모든 값이 올바르게 입력되었는지 확인하는 습관이 중요합니다.</li>
-                </ul>
+
+            <!-- 실시간 트레이딩 제어 -->
+            <div class="usage-item glass reveal">
+                <div class="usage-media">
+                    <img src="images/trading_control.png" alt="제어판" class="usage-img">
+                </div>
+                <div class="usage-info">
+                    <span class="usage-tag">Trading</span>
+                    <h3>02. 실시간 트레이딩 제어</h3>
+                    <p>조건 검색식 선택과 머신러닝 전략 실행을 통해 자동매매를 제어합니다. 비상 상황 시 즉시 모든 동작을 중단할 수 있는 안전 장치가 마련되어 있습니다.</p>
+                    <ul class="usage-list">
+                        <li><strong>조건 검색:</strong> 캐치(KATCH) 조건식 실시간 포착</li>
+                        <li><strong>ML 전략:</strong> 서버에서 최신 예측 데이터 다운로드 및 적용</li>
+                        <li><strong>비상 정지:</strong> 긴급 상황 시 즉시 시스템 제어</li>
+                    </ul>
+                </div>
             </div>
+
+            <!-- 포트폴리오 관리 -->
+            <div class="usage-item glass reveal">
+                <div class="usage-info">
+                    <span class="usage-tag">Portfolio</span>
+                    <h3>03. 포트폴리오 및 개별 설정</h3>
+                    <p>현재 보유 중인 종목의 수익률을 실시간으로 모니터링하고, 각 종목별로 최적화된 매도 전략을 개별적으로 설정할 수 있습니다.</p>
+                    <ul class="usage-list">
+                        <li><strong>실시간 수익률:</strong> 보유 종목별 상세 손익 현황</li>
+                        <li><strong>개별 목표 설정:</strong> 우클릭 메뉴를 통한 익절/손절가 커스텀</li>
+                        <li><strong>전략 구분:</strong> 각 종목이 어떤 전략으로 매수되었는지 표시</li>
+                    </ul>
+                </div>
+                <div class="usage-media">
+                    <img src="images/trading_portfolio.png" alt="포트폴리오" class="usage-img">
+                </div>
+            </div>
+
+            <!-- 데이터 조회 및 분석 -->
+            <div class="usage-item glass reveal">
+                <div class="usage-media">
+                    <img src="images/db_summary.png" alt="계좌 요약" class="usage-img">
+                </div>
+                <div class="usage-info">
+                    <span class="usage-tag">Analysis</span>
+                    <h3>04. 데이터 조회 및 성과 분석</h3>
+                    <p>과거 매매 기록과 계좌의 자산 변화를 상세히 분석합니다. 통계 지표를 통해 자신의 매매 전략을 지속적으로 개선할 수 있습니다.</p>
+                    <ul class="usage-list">
+                        <li><strong>계좌 요약:</strong> 추정자산 및 총 평가 손익 확인</li>
+                        <li><strong>매매 기록 집계:</strong> 종목별/일별 승률 및 PF 분석</li>
+                        <li><strong>상세 로그:</strong> 과거 조건 포착 및 매매 내역 조회</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 시스템 설정 -->
+            <div class="usage-item glass reveal">
+                <div class="usage-info">
+                    <span class="usage-tag">Settings</span>
+                    <h3>05. 정밀한 시스템 설정</h3>
+                    <p>매매 임계값, 리스크 관리 로직, 알림 설정 등 시스템의 핵심 파라미터를 사용자의 투자 성향에 맞게 조정할 수 있습니다.</p>
+                    <ul class="usage-list">
+                        <li><strong>시장 필터:</strong> 지수 급락 시 자동 매수 제한 설정</li>
+                        <li><strong>알림 설정:</strong> Discord를 통한 실시간 매매 알림</li>
+                        <li><strong>전략 파라미터:</strong> 트레일링 스탑 및 타임컷 상세 설정</li>
+                    </ul>
+                </div>
+                <div class="usage-media">
+                    <img src="images/settings_main.png" alt="설정 화면" class="usage-img">
+                </div>
+            </div>
+
         </div>
     </section>
 
