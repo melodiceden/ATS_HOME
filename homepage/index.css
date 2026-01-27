@@ -284,6 +284,78 @@ section {
     color: var(--text-dim);
 }
 
+/* Usage Section */
+.usage-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.usage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+}
+
+.usage-card {
+    text-align: center;
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.usage-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.usage-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.usage-card p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+}
+
+.usage-tips {
+    padding: 2.5rem;
+    background: rgba(0, 162, 255, 0.05);
+    border-radius: 20px;
+    border: 1px dashed var(--primary-color);
+}
+
+.usage-tips h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.usage-tips ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.usage-tips li {
+    color: var(--text-dim);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.usage-tips li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
 /* Footer */
 footer {
     padding: 4rem 10%;
@@ -328,5 +400,9 @@ footer p {
 
     .preview-container {
         min-height: 300px;
+    }
+
+    .usage-content {
+        padding: 2rem;
     }
 }
