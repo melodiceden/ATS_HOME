@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATS - Automated Trading System | 데이터로 이기고 지능으로 매매하라</title>
-    <meta name="description" content="AI 기반 주식 자동매매 시스템 ATS. 복잡한 분석은 AI에게 맡기고 결과만 확인하세요.">
+    <title>MATS - 규칙대로 움직이는 자동매매 백엔드</title>
+    <meta name="description" content="MATS는 내 PC에서 돌고 내 증권 계좌로 주문하는 자동매매 백엔드입니다. 매수·청산 규칙이 코드로 고정되어 있고, 폰과 웹에서 상태를 확인합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MATS - 규칙대로 움직이는 자동매매 백엔드">
+    <meta property="og:description" content="내 PC에서 돌고, 내 계좌로 주문합니다. 규칙은 코드로 고정되어 있습니다.">
+    <meta property="og:locale" content="ko_KR">
     <link rel="stylesheet" href="index.css">
     <link rel="manifest" href="manifest.json">
 </head>
@@ -14,207 +18,206 @@
     <div class="bg-glow"></div>
 
     <nav id="navbar">
-        <a href="index.html" class="logo">ATS</a>
+        <a href="index.html" class="logo">MATS</a>
         <ul class="nav-links">
-            <li><a href="#features">주요 기능</a></li>
-            <li><a href="#tech">기술 전략</a></li>
-            <li><a href="#guide">설치방법</a></li>
-            <li><a href="#usage">ATS사용방법</a></li>
+            <li><a href="#features">무엇인가</a></li>
+            <li><a href="#how">동작 방식</a></li>
+            <li><a href="#safety">안전장치</a></li>
+            <li><a href="#guide">시작하기</a></li>
         </ul>
-        <a href="https://github.com/melodiceden/ATS_HOME/releases/download/version/ATS_Setup_v1.0.2.exe"
-            class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">시작하기</a>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">문의하기</a>
     </nav>
 
     <header class="hero">
-        <h1 class="reveal">데이터로 이기고,<br>지능으로 매매하라.</h1>
-        <p class="reveal">더 스마트한 주식 투자의 시작, ATS. 복잡한 분석은 AI에게 맡기고, 당신은 결과만 확인하세요. 완전 자동화된 스윙 매수 전략과 강력한 GUI 시스템.</p>
+        <h1 class="reveal">규칙대로 움직입니다.<br>그게 전부입니다.</h1>
+        <p class="reveal">MATS는 내 PC에서 도는 자동매매 백엔드입니다. 정해진 조건이 맞을 때만 사고, 정해진 규칙에 따라 정리합니다.
+            사람이 장중에 화면을 붙들고 있지 않아도 되고, 그날의 기분이 판단에 끼어들지 않습니다.</p>
         <div class="cta-group reveal">
-            <a href="https://github.com/melodiceden/ATS_HOME/releases/download/version/ATS_Setup_v1.0.2.exe"
-                class="btn btn-primary">지금 시작하기</a>
+            <a href="#how" class="btn btn-primary">동작 방식 보기</a>
+            <a href="#contact" class="btn btn-secondary">문의하기</a>
         </div>
     </header>
 
     <section id="features">
-        <h2 class="section-title reveal">핵심 특징</h2>
+        <h2 class="section-title reveal">MATS가 하는 일</h2>
         <div class="features-grid">
             <div class="feature-card glass reveal">
-                <h3>AI/ML 기반 종목 선정</h3>
-                <p>매일 업데이트되는 머신러닝 모델이 수천 개의 종목 중 가장 승률 높은 종목을 정밀 타격합니다. 기술적 지표와 퀀트 데이터를 결합한 최적의 리스트를 제공합니다.</p>
+                <h3>규칙이 먼저입니다</h3>
+                <p>무엇을 감시하고, 언제 사고, 어떻게 정리할지가 코드로 고정되어 있습니다. 장중에 조건을 바꿔 가며 대응하지 않습니다.
+                    실제로 적용 중인 기준값은 앱의 <strong>작동 방식</strong> 화면에서 항상 현재 값으로 확인할 수 있습니다.</p>
             </div>
             <div class="feature-card glass reveal">
-                <h3>완전 자동 매매 시스템</h3>
-                <p>장 시작 전 전략 수립부터 장중 실시간 매수/매도까지, 한 번의 클릭으로 모든 과정이 자동화됩니다. 감정의 개입 없는 철저한 원칙 매매를 실현합니다.</p>
+                <h3>내 PC, 내 계좌</h3>
+                <p>백엔드는 사용자의 PC에서 돌고, 주문은 사용자 본인의 증권사 계좌로 나갑니다. 자금을 어딘가에 맡기거나
+                    옮기지 않습니다. 계좌와 키는 사용자 PC를 떠나지 않습니다.</p>
             </div>
             <div class="feature-card glass reveal">
-                <h3>실시간 데이터 모니터링</h3>
-                <p>키움 API 기반의 실시간 시세와 계좌 정보를 직관적인 대시보드로 한눈에 파악하세요. 현재 자산 상태와 체결 현황을 지연 없이 확인 가능합니다.</p>
+                <h3>폰과 웹에서 확인</h3>
+                <p>보유 종목, 감시 목록, 체결 내역, 실행 로그를 폰 앱과 웹 대시보드에서 봅니다. 조회는 밖에서도 되지만
+                    <strong>매도·설정 같은 제어는 집 네트워크 안에서만</strong> 열립니다.</p>
             </div>
         </div>
     </section>
 
-    <section id="tech" class="glass" style="margin: 0 10%; border-radius: 30px;">
-        <h2 class="section-title reveal">기술적 강점</h2>
-        <div class="tech-grid">
-            <div class="tech-item reveal">
-                <h4>안정적인 멀티 프로세스</h4>
-                <p>GUI와 실행 엔진을 분리하여 시스템 중단 없는 최상의 안정성을 제공합니다. 리소스 최적화를 통해 24시간 안정적인 구동이 가능합니다.</p>
-            </div>
-            <div class="tech-item reveal">
-                <h4>실시간 클라우드 동기화</h4>
-                <p>Supabase 클라우드를 통해 토큰 세션과 데이터를 실시간으로 관리합니다. 어디서든 동일한 환경에서 매매를 이어갈 수 있습니다.</p>
-            </div>
-            <div class="tech-item reveal">
-                <h4>정밀한 리스크 관리</h4>
-                <p>서킷 브레이커 감지 및 자동 손절 로직으로 급변하는 시장에서도 당신의 자산을 보호합니다. 위험 요소를 사전에 차단하는 AI 방어 기제.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="guide">
-        <h2 class="section-title reveal">설치 및 키움 API 등록 방법</h2>
-        <div class="guide-content glass reveal">
+    <section id="how" class="glass" style="margin: 0 10%; border-radius: 30px;">
+        <h2 class="section-title reveal">하루가 이렇게 흘러갑니다</h2>
+        <div class="guide-content reveal" style="background: none; border: none; box-shadow: none; padding: 0;">
             <div class="guide-step">
                 <div class="step-number">01</div>
                 <div class="step-text">
-                    <h3>프로그램 다운로드 및 설치</h3>
-                    <p>상단의 '시작하기' 버튼을 클릭하여 설치 파일(`ATS_Setup.exe`)을 다운로드하고 실행합니다. 안내에 따라 설치를 완료해 주세요.</p>
+                    <h3>장 시작 전 — 후보를 받는다</h3>
+                    <p>전날 저녁에 산출된 추천 종목 목록을 내려받습니다. 이 목록이 그날 감시할 수 있는 전체 범위이고,
+                        여기 없는 종목은 자동으로 사지 않습니다.</p>
                 </div>
             </div>
             <div class="guide-step">
                 <div class="step-number">02</div>
                 <div class="step-text">
-                    <h3>키움증권 Open API+ 신청</h3>
-                    <p><a href="https://www.kiwoom.com/h/customer/download/VOpenApiInfoView" target="_blank"
-                            style="color: var(--primary-color); text-decoration: underline;">키움증권 홈페이지</a>의 [홈페이지 >
-                        고객서비스 > 다운로드 > Open API > 키움 Open API+]
-                        메뉴에서 서비스 사용 신청을 완료해야 합니다.</p>
+                    <h3>장 초반 — 점수를 매겨 걸러낸다</h3>
+                    <p>후보를 주기적으로 재채점해 기준 점수를 넘는 종목만 감시 목록에 올립니다. 목록에 올랐다고 사는 것이
+                        아니라, 살 수 있는 자격을 얻는 것입니다.</p>
                 </div>
             </div>
             <div class="guide-step">
                 <div class="step-number">03</div>
                 <div class="step-text">
-                    <h3>Open API+ 모듈 설치</h3>
-                    <p>Open API+ 신청 페이지에서 제공하는 'Open API+ 모듈'을 설치합니다. 정상적인 작동을 위해 반드시 설치가 필요합니다.</p>
+                    <h3>매수 — 신호가 나야 산다</h3>
+                    <p>감시 중인 종목이 이동평균선 근처까지 눌렸다가 거래량을 동반해 되돌아설 때만 매수합니다.
+                        오전 시간대에만 진입하고, 지수가 급락하면 신규 매수를 스스로 멈춥니다.</p>
                 </div>
             </div>
             <div class="guide-step">
                 <div class="step-number">04</div>
                 <div class="step-text">
-                    <h3>ATS 실행 및 로그인</h3>
-                    <p>설치된 ATS 프로그램을 실행하고 키움증권 계정으로 로그인합니다. 최초 실행 시 API 인증 절차가 진행될 수 있습니다.</p>
+                    <h3>청산 — 네 갈래, 그리고 내가 정한 값</h3>
+                    <p>1차 익절 후 남은 물량은 고점 대비 하락으로 정리하고, 손실이 커지면 손절, 오래 묶이면 기간 만료로
+                        정리합니다. 여기에 더해 <strong>종목별로 목표가와 손절가를 직접 걸 수 있습니다.</strong>
+                        직접 건 값은 그 방향의 자동 규칙을 대신합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="safety">
+        <h2 class="section-title reveal">자산을 지키는 쪽</h2>
+        <div class="tech-grid">
+            <div class="tech-item reveal">
+                <h4>지수 급락 시 매수 중단</h4>
+                <p>시장 전체가 무너지는 날에는 신규 매수를 자동으로 멈추고, 지수가 회복되면 다시 엽니다.
+                    이미 보유한 종목의 청산 규칙은 그대로 작동합니다.</p>
+            </div>
+            <div class="tech-item reveal">
+                <h4>시세가 끊기면 방어한다</h4>
+                <p>보유 종목의 실시간 시세 수신이 끊기면 판단 근거가 사라진 것으로 보고 정해진 절차로 대응합니다.
+                    보이지 않는 상태로 포지션을 방치하지 않습니다.</p>
+            </div>
+            <div class="tech-item reveal">
+                <h4>주인만 조종할 수 있습니다</h4>
+                <p>백엔드는 최초 로그인한 계정 하나에 묶입니다. 그 계정이 아니면 조회도 제어도 되지 않고,
+                    소유자가 정해지기 전에는 자동매매 자체가 켜지지 않습니다.</p>
+            </div>
+            <div class="tech-item reveal">
+                <h4>직접 산 종목은 건드리지 않습니다</h4>
+                <p>HTS·MTS로 사용자가 직접 매수한 종목은 자동 매도 대상에서 제외됩니다.
+                    다만 그 종목에도 목표가·손절가를 직접 걸어 둘 수는 있습니다.</p>
+            </div>
+            <div class="tech-item reveal">
+                <h4>서비스로 상시 구동</h4>
+                <p>PC가 재부팅되어도 자동으로 다시 뜨고, 보유 상태와 청산 기준선을 복원합니다.
+                    프로그램 갱신은 장이 끝난 뒤에만 이루어집니다.</p>
+            </div>
+            <div class="tech-item reveal">
+                <h4>기록이 남습니다</h4>
+                <p>매수·매도 판단의 근거와 그때의 점수가 로그로 남습니다. 왜 샀고 왜 팔았는지를
+                    나중에 되짚어 볼 수 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide">
+        <h2 class="section-title reveal">시작하기</h2>
+        <div class="guide-content glass reveal">
+            <div class="guide-step">
+                <div class="step-number">01</div>
+                <div class="step-text">
+                    <h3>모의투자부터 시작합니다</h3>
+                    <p>키움증권에서 REST API 앱키를 발급받습니다. <strong>반드시 모의투자 키로 먼저 검증한 뒤</strong>
+                        실계좌로 전환하는 것을 권합니다. 모의투자 앱키는 만료가 있어 주기적으로 갱신해야 합니다.</p>
+                </div>
+            </div>
+            <div class="guide-step">
+                <div class="step-number">02</div>
+                <div class="step-text">
+                    <h3>백엔드를 설치합니다</h3>
+                    <p>Windows PC에 설치하면 백그라운드 서비스로 등록됩니다. 장 시간 동안 켜져 있어야 하므로
+                        상시 구동이 가능한 PC를 권합니다. 설치본은 문의를 통해 안내해 드립니다.</p>
+                </div>
+            </div>
+            <div class="guide-step">
+                <div class="step-number">03</div>
+                <div class="step-text">
+                    <h3>앱키를 입력하고 서비스를 시작합니다</h3>
+                    <p>설치 후 설정 파일에 키움 앱키와 시크릿을 넣고 서비스를 재시작합니다.
+                        이 파일에는 비밀키가 들어가므로 외부에 공유하지 않습니다.</p>
+                </div>
+            </div>
+            <div class="guide-step">
+                <div class="step-number">04</div>
+                <div class="step-text">
+                    <h3>제어판에서 로그인해 소유자를 등록합니다</h3>
+                    <p>최초 로그인한 계정이 이 백엔드의 소유자가 됩니다. <strong>이 단계를 마쳐야 폰 앱 접근과
+                            자동매매가 열립니다.</strong></p>
                 </div>
             </div>
             <div class="guide-step">
                 <div class="step-number">05</div>
                 <div class="step-text">
-                    <h3>Open API+ 비밀번호 저장</h3>
-                    <p>트레이딩 바의 [기능 > 계좌비밀번호 저장] 메뉴에서 계좌 비밀번호를 입력하고 '전체계좌 저장'을 체크한 후 등록합니다. 이 과정을 거쳐야 자동 매매가 원활히 진행됩니다.
-                    </p>
+                    <h3>폰 앱과 웹 대시보드를 연결합니다</h3>
+                    <p>같은 네트워크에서 웹 대시보드에 접속하거나 폰 앱으로 연결합니다. 보유·감시·체결·로그를 확인하고,
+                        종목별 목표가와 손절가를 여기서 겁니다.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="usage">
-        <h2 class="section-title reveal">ATS 사용방법</h2>
-        <div class="usage-detail-content reveal">
-
-            <!-- 메인 화면 구성 -->
-            <div class="usage-item glass reveal">
-                <div class="usage-info">
-                    <span class="usage-tag">Overview</span>
-                    <h3>01. 메인 화면 구성</h3>
-                    <p>ATS GUI는 상단 상태바, 중앙 탭 영역, 하단 로그 창으로 구성되어 있습니다. 실시간 시장 지수와 프로그램의 동작 상태를 한눈에 파악할 수 있습니다.</p>
-                    <ul class="usage-list">
-                        <li><strong>시장 상태:</strong> 장중, 장 마감, 휴장일 정보 표시</li>
-                        <li><strong>지수 정보:</strong> KOSPI/KOSDAQ 실시간 등락률</li>
-                        <li><strong>로그 창:</strong> 모든 API 요청 및 매매 내역 실시간 출력</li>
-                    </ul>
-                </div>
-                <div class="usage-media">
-                    <img src="images/main_full.png" alt="ATS 메인 화면" class="usage-img">
-                </div>
+    <section id="contact">
+        <h2 class="section-title reveal">문의</h2>
+        <div class="guide-content glass reveal">
+            <div class="step-text">
+                <h3>도입을 검토하신다면</h3>
+                <!-- TODO: 연락처를 여기에 넣을 것. 이메일 주소를 공개 페이지에 그대로 두면
+                     수집 봇의 대상이 되므로, 문의 폼이나 별도 채널을 권합니다. -->
+                <p>MATS는 사용자의 PC와 증권 계좌 위에서 동작하므로, 환경에 따라 준비할 것이 다릅니다.
+                    도입을 검토하신다면 사용 중인 증권사와 PC 환경을 알려 주시면 안내해 드리겠습니다.</p>
+                <p style="opacity: 0.6; font-size: 0.9rem;">※ 연락 방법은 준비 중입니다.</p>
             </div>
+        </div>
+    </section>
 
-            <!-- 실시간 트레이딩 제어 -->
-            <div class="usage-item glass reveal">
-                <div class="usage-media">
-                    <img src="images/trading_control.png" alt="제어판" class="usage-img">
-                </div>
-                <div class="usage-info">
-                    <span class="usage-tag">Trading</span>
-                    <h3>02. 실시간 트레이딩 제어</h3>
-                    <p>조건 검색식 선택과 머신러닝 전략 실행을 통해 자동매매를 제어합니다. 비상 상황 시 즉시 모든 동작을 중단할 수 있는 안전 장치가 마련되어 있습니다.</p>
-                    <ul class="usage-list">
-                        <li><strong>조건 검색:</strong> 캐치(KATCH) 조건식 실시간 포착</li>
-                        <li><strong>ML 전략:</strong> 서버에서 최신 예측 데이터 다운로드 및 적용</li>
-                        <li><strong>비상 정지:</strong> 긴급 상황 시 즉시 시스템 제어</li>
-                    </ul>
-                </div>
+    <section id="disclaimer">
+        <h2 class="section-title reveal">반드시 알아 두실 것</h2>
+        <div class="guide-content glass reveal">
+            <div class="step-text">
+                <ul class="usage-list">
+                    <li><strong>MATS는 투자자문·투자일임 서비스가 아닙니다.</strong> 사용자 본인의 계좌에서, 사용자가 설정한
+                        조건에 따라 주문이 실행되는 도구입니다. 특정 종목의 매수·매도를 권유하지 않습니다.</li>
+                    <li><strong>원금 손실이 발생할 수 있습니다.</strong> 자동매매는 손실을 막아 주는 장치가 아니라
+                        정해진 규칙을 대신 실행하는 장치입니다. 투자 판단과 그 결과에 대한 책임은 사용자 본인에게 있습니다.</li>
+                    <li><strong>수익을 보장하지 않습니다.</strong> 과거 검증 결과가 미래의 성과를 담보하지 않으며,
+                        시장 상황에 따라 손실 구간이 이어질 수 있습니다.</li>
+                    <li><strong>기술적 실패가 있을 수 있습니다.</strong> 증권사 API 장애, 네트워크 단절, 정전, PC 오류 등으로
+                        주문이 지연되거나 실행되지 않을 수 있습니다.</li>
+                    <li><strong>실계좌 전환 전에 모의투자로 충분히 확인하십시오.</strong> 소액으로 시작해 동작을 직접
+                        확인한 뒤 규모를 늘리시길 권합니다.</li>
+                </ul>
             </div>
-
-            <!-- 포트폴리오 관리 -->
-            <div class="usage-item glass reveal">
-                <div class="usage-info">
-                    <span class="usage-tag">Portfolio</span>
-                    <h3>03. 포트폴리오 및 개별 설정</h3>
-                    <p>현재 보유 중인 종목의 수익률을 실시간으로 모니터링하고, 각 종목별로 최적화된 매도 전략을 개별적으로 설정할 수 있습니다.</p>
-                    <ul class="usage-list">
-                        <li><strong>실시간 수익률:</strong> 보유 종목별 상세 손익 현황</li>
-                        <li><strong>개별 목표 설정:</strong> 우클릭 메뉴를 통한 익절/손절가 커스텀</li>
-                        <li><strong>전략 구분:</strong> 각 종목이 어떤 전략으로 매수되었는지 표시</li>
-                    </ul>
-                </div>
-                <div class="usage-media">
-                    <img src="images/trading_portfolio.png" alt="포트폴리오" class="usage-img">
-                </div>
-            </div>
-
-            <!-- 데이터 조회 및 분석 -->
-            <div class="usage-item glass reveal">
-                <div class="usage-media">
-                    <img src="images/db_summary.png" alt="계좌 요약" class="usage-img">
-                </div>
-                <div class="usage-info">
-                    <span class="usage-tag">Analysis</span>
-                    <h3>04. 데이터 조회 및 성과 분석</h3>
-                    <p>과거 매매 기록과 계좌의 자산 변화를 상세히 분석합니다. 통계 지표를 통해 자신의 매매 전략을 지속적으로 개선할 수 있습니다.</p>
-                    <ul class="usage-list">
-                        <li><strong>계좌 요약:</strong> 추정자산 및 총 평가 손익 확인</li>
-                        <li><strong>매매 기록 집계:</strong> 종목별/일별 승률 및 PF 분석</li>
-                        <li><strong>상세 로그:</strong> 과거 조건 포착 및 매매 내역 조회</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 시스템 설정 -->
-            <div class="usage-item glass reveal">
-                <div class="usage-info">
-                    <span class="usage-tag">Settings</span>
-                    <h3>05. 정밀한 시스템 설정</h3>
-                    <p>매매 임계값, 리스크 관리 로직, 알림 설정 등 시스템의 핵심 파라미터를 사용자의 투자 성향에 맞게 조정할 수 있습니다.</p>
-                    <ul class="usage-list">
-                        <li><strong>시장 필터:</strong> 지수 급락 시 자동 매수 제한 설정</li>
-                        <li><strong>알림 설정:</strong> Discord를 통한 실시간 매매 알림</li>
-                        <li><strong>전략 파라미터:</strong> 트레일링 스탑 및 타임컷 상세 설정</li>
-                    </ul>
-                </div>
-                <div class="usage-media">
-                    <img src="images/settings_main.png" alt="설정 화면" class="usage-img">
-                </div>
-            </div>
-
         </div>
     </section>
 
     <footer class="reveal">
-        <p>준비되셨나요? 당신의 트레이딩을 진화시키세요.</p>
-        <div class="cta-group" style="justify-content: center;">
-            <a href="#" class="btn btn-primary">문의하기</a>
-            <a href="#" class="btn btn-secondary">매뉴얼 보기</a>
-        </div>
+        <p>규칙은 코드에, 판단의 책임은 사용자에게.</p>
         <div style="margin-top: 3rem; color: #555; font-size: 0.8rem;">
-            &copy; 2026 ATS Automated Trading System. All rights reserved.
+            &copy; 2026 MATS. All rights reserved.
         </div>
     </footer>
 
