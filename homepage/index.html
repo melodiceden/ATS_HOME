@@ -139,8 +139,10 @@
                 <div class="step-number">01</div>
                 <div class="step-text">
                     <h3>장 시작 전 — 후보를 받는다</h3>
-                    <p>전날 저녁에 산출된 추천 종목 목록을 내려받습니다. 이 목록이 그날 감시할 수 있는 전체 범위이고,
-                        여기 없는 종목은 자동으로 사지 않습니다.</p>
+                    <p>정해진 규칙과 모델이 전날 저녁에 자동으로 추려 둔 <strong>후보 목록</strong>을 내려받습니다.
+                        사람이 종목을 고르거나 의견을 붙이지 않습니다.</p>
+                    <p>이 목록은 그날 감시할 수 있는 전체 범위일 뿐, 여기 오른 종목을 사라는 뜻이 아닙니다.
+                        실제 매수는 아래 조건을 더 통과해야 일어나고, 목록에 없는 종목은 자동으로 사지 않습니다.</p>
                 </div>
             </div>
             <div class="guide-step">
@@ -172,13 +174,13 @@
 
         <div class="figure reveal">
             <svg viewBox="0 0 900 210" role="img"
-                aria-label="하루 흐름: 장 전 추천 수신, 09시 감시 등록, 오전 눌림목 매수, 장중 상시 청산 규칙, 마감 후 자동 업데이트">
+                aria-label="하루 흐름: 장 전 후보 수신, 09시 감시 등록, 오전 눌림목 매수, 장중 상시 청산 규칙, 마감 후 자동 업데이트">
                 <line class="fig-line" x1="70" y1="110" x2="830" y2="110" />
                 <line class="fig-arrow anim-draw" x1="70" y1="110" x2="830" y2="110" />
 
                 <circle class="fig-dot anim-pop d1" cx="70" cy="110" r="8" />
                 <text class="fig-title anim-pop d1" x="70" y="72" text-anchor="middle">장 전</text>
-                <text class="fig-sub anim-pop d1" x="70" y="152" text-anchor="middle">추천 수신</text>
+                <text class="fig-sub anim-pop d1" x="70" y="152" text-anchor="middle">후보 목록 수신</text>
 
                 <circle class="fig-dot anim-pop d2" cx="260" cy="110" r="8" />
                 <text class="fig-title anim-pop d2" x="260" y="72" text-anchor="middle">장 초반</text>
@@ -334,7 +336,10 @@
             <div class="step-text">
                 <ul class="usage-list">
                     <li><strong>MATS는 투자자문·투자일임 서비스가 아닙니다.</strong> 사용자 본인의 계좌에서, 사용자가 설정한
-                        조건에 따라 주문이 실행되는 도구입니다. 특정 종목의 매수·매도를 권유하지 않습니다.</li>
+                        조건에 따라 주문이 실행되는 도구입니다. 자금을 위탁받거나 대신 운용하지 않습니다.</li>
+                    <li><strong>후보 목록은 사람의 의견이 아닙니다.</strong> 정해진 규칙과 모델이 자동으로 산출한 결과이며,
+                        그 종목의 상승을 예측하거나 권유하기 위한 것이 아닙니다. 목록을 쓸지, 자동매매를 켤지,
+                        어떤 조건으로 둘지는 모두 사용자가 정합니다.</li>
                     <li><strong>원금 손실이 발생할 수 있습니다.</strong> 자동매매는 손실을 막아 주는 장치가 아니라
                         정해진 규칙을 대신 실행하는 장치입니다. 투자 판단과 그 결과에 대한 책임은 사용자 본인에게 있습니다.</li>
                     <li><strong>수익을 보장하지 않습니다.</strong> 과거 검증 결과가 미래의 성과를 담보하지 않으며,
