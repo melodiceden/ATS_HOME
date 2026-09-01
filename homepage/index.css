@@ -565,3 +565,143 @@ footer p {
         animation: none;
     }
 }
+
+/* ── 히어로 배경 차트 ──────────────────────────────────────────────
+   [2026-09-01] 장식이다 — aria-hidden 이고 정보를 담지 않는다.
+   ★모양을 '우상향 일변도'로 그리지 않았다. 문구에서 뺀 수익 암시를 그림으로 되살리는 셈이 된다.
+     상승·눌림·조정·회복이 섞인 중립적인 흐름이고, 숫자도 축 라벨도 없다.
+   ★가독성이 먼저다 — 히어로 글자가 본문색(진한 회색)이므로 차트는 매우 옅게 깔고,
+     텍스트는 z-index 로 확실히 위에 둔다. */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero>*:not(.hero-chart) {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-chart {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+    /* 아래쪽으로 갈수록 흐려져 본문과 자연스럽게 이어진다 */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.55) 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.55) 55%, transparent 100%);
+}
+
+.hc-grid {
+    stroke: var(--text-dim);
+    stroke-width: 1;
+    opacity: 0.13;
+}
+
+.hc-up {
+    fill: #17803D;
+    opacity: 0.30;
+}
+
+.hc-up-w {
+    stroke: #17803D;
+    stroke-width: 1.6;
+    opacity: 0.30;
+}
+
+.hc-down {
+    fill: #C2334D;
+    opacity: 0.26;
+}
+
+.hc-down-w {
+    stroke: #C2334D;
+    stroke-width: 1.6;
+    opacity: 0.26;
+}
+
+.hc-ma {
+    fill: none;
+    stroke: var(--primary-color);
+    stroke-width: 2.6;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    opacity: 0.5;
+}
+
+.hc-pulse {
+    fill: var(--primary-color);
+    opacity: 0.55;
+}
+
+/* 캔들이 왼쪽부터 순서대로 올라온다 (스크롤이 아니라 **로드 직후** — 히어로는 첫 화면이다) */
+.hc-candle {
+    opacity: 0;
+    animation: hc-in 0.55s ease-out forwards;
+}
+
+@keyframes hc-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 이동평균선은 캔들이 어느 정도 찬 뒤 그려진다 */
+.anim-draw-hero {
+    stroke-dasharray: 2400;
+    stroke-dashoffset: 2400;
+    animation: fig-draw 2.6s 0.7s ease-out forwards;
+}
+
+.hc-pulse {
+    animation: hc-pulse 2.8s 3.1s ease-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes hc-pulse {
+
+    0%,
+    100% {
+        opacity: 0.55;
+        r: 6;
+    }
+
+    50% {
+        opacity: 0.2;
+        r: 11;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-chart {
+        opacity: 0.35;
+    }
+}
+
+/* 움직임 줄이기: 끄되 **최종 상태로** (끄기만 하면 차트가 통째로 사라진다) */
+@media (prefers-reduced-motion: reduce) {
+
+    .hc-candle {
+        opacity: 1;
+        animation: none;
+    }
+
+    .anim-draw-hero {
+        stroke-dashoffset: 0;
+        animation: none;
+    }
+
+    .hc-pulse {
+        animation: none;
+    }
+}
