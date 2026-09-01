@@ -359,3 +359,209 @@ footer p {
         margin: 0 4% !important;
     }
 }
+
+/* ── 도해 (인라인 SVG) ─────────────────────────────────────────────
+   [2026-09-01] 이미지 파일을 두지 않는다. 실제 화면 캡처가 없는 상태에서 그럴듯한
+   '가짜 스크린샷'을 만들면 실물과 달라져 오해를 부르고, 캡처가 생기면 그때 갈아야 한다.
+   도해는 정보를 담고, 확대해도 안 깨지며, 색이 테마 변수를 그대로 따라간다. */
+.figure {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+}
+
+.figure svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.figure svg text {
+    font-family: inherit;
+}
+
+.figure-caption {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.fig-box {
+    fill: var(--bg-card);
+    stroke: var(--border-soft);
+    stroke-width: 1.5;
+}
+
+.fig-box-accent {
+    fill: rgba(11, 107, 203, 0.06);
+    stroke: var(--primary-color);
+    stroke-width: 1.5;
+}
+
+.fig-title {
+    fill: var(--text-main);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.fig-sub {
+    fill: var(--text-dim);
+    font-size: 13px;
+}
+
+.fig-note {
+    fill: var(--text-dim);
+    font-size: 13.5px;
+}
+
+.fig-line {
+    stroke: var(--border-soft);
+    stroke-width: 2;
+}
+
+.fig-arrow {
+    stroke: var(--primary-color);
+    stroke-width: 2;
+    fill: none;
+}
+
+.fig-dot {
+    fill: var(--primary-color);
+}
+
+.fig-dash {
+    stroke: var(--text-dim);
+    stroke-width: 1.5;
+    stroke-dasharray: 5 5;
+    opacity: 0.55;
+}
+
+.fig-up {
+    fill: #17803D;
+}
+
+.fig-down {
+    fill: #C2334D;
+}
+
+.fig-mine {
+    fill: var(--secondary-color);
+}
+
+/* ── 도해 애니메이션 ───────────────────────────────────────────────
+   화면에 들어올 때(.reveal.active) 시작한다. 페이지를 열자마자 아래쪽 도해가
+   혼자 다 돌아버리면 정작 볼 때는 끝나 있으므로, 기존 IntersectionObserver 를 그대로 쓴다. */
+
+/* 선을 왼쪽에서 오른쪽으로 그린다 */
+.anim-draw {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+}
+
+.reveal.active .anim-draw {
+    animation: fig-draw 1.6s ease-out forwards;
+}
+
+@keyframes fig-draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* 순서대로 켜지는 표식 */
+.anim-pop {
+    opacity: 0;
+}
+
+.reveal.active .anim-pop {
+    animation: fig-pop 0.5s ease-out forwards;
+}
+
+@keyframes fig-pop {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.d1 { animation-delay: 0.15s; }
+.d2 { animation-delay: 0.45s; }
+.d3 { animation-delay: 0.75s; }
+.d4 { animation-delay: 1.05s; }
+.d5 { animation-delay: 1.35s; }
+.d6 { animation-delay: 1.75s; }
+
+/* 연결선 위를 흐르는 점 — 데이터가 오가는 것 */
+.reveal.active .anim-flow {
+    animation: fig-flow 2.4s linear infinite;
+}
+
+@keyframes fig-flow {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    88% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(120px);
+        opacity: 0;
+    }
+}
+
+.reveal.active .anim-flow-back {
+    animation: fig-flow-back 2.4s linear infinite;
+    animation-delay: 1.2s;
+}
+
+@keyframes fig-flow-back {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    88% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+}
+
+/* ★움직임을 줄이도록 설정한 사용자: 애니메이션을 끄되 **최종 상태로 보이게** 한다.
+   (끄기만 하면 opacity:0 · dashoffset 2000 이 남아 도해가 통째로 사라진다) */
+@media (prefers-reduced-motion: reduce) {
+
+    .anim-draw {
+        stroke-dashoffset: 0;
+    }
+
+    .anim-pop {
+        opacity: 1;
+    }
+
+    .reveal.active .anim-draw,
+    .reveal.active .anim-pop,
+    .reveal.active .anim-flow,
+    .reveal.active .anim-flow-back {
+        animation: none;
+    }
+}
